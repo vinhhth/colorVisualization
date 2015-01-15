@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <title>YouTube Video Color Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <div id="barcode">
+          <img class="img-responsive" src="/static/barcode.png">
+        </div>
+        <div class="caption">
+          <h3>Barcode</h3>
+        </div>
+      </div>
+      <div class="thumbnail">
+        <div id="palette">
+          <img class="img-responsive" src="/static/palette.png">
+        </div>
+        <div class="caption">
+          <h3>5 Color Palette</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <div id="video">
+          <iframe width="280" height="157" src="{{video}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="caption">
+          <h3>Video</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <div id="histogram">
+          <img class="img-responsive" src="/static/histogram.png">
+        </div>
+        <div class="caption">
+          <h3>Histogram</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <div id="barcode-colors">
+          <img class="img-responsive" src="/static/barcode_colors.png">
+        </div>
+        <div class="caption">
+          <h3>Full Unique Color Palette</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

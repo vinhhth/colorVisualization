@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>YouTube Video Color Analysis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#inputURL").change(function() {
+            videoURL = $("#inputURL").val().replace(/^https:\/\//, "http://");
+          console.log(videoURL);
+          $("#frame").attr("src", videoURL.replace("watch?v=", "embed/"));
+        }).change();
+      });
+    </script>
+  </head>
+<body>
+<div class="container">
+  <form class="video-form" role="form" method="GET" action="/viz">
+    <h2>Enter YouTube Video URL</h2>
+    <input type="text" id="inputURL" name="video" class="form-control" value="http://www.youtube.com/watch?v=moSFlvxnbgk" required autofocus>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Analyze</button>
+  </form>
+  <div id="video-frame">
+    <iframe width="560" height="315" src="" id="frame"></iframe>
+  </div>
+</div>
+</body>
+</html>
